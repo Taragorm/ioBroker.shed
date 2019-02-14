@@ -1,22 +1,22 @@
 {
-  "name": "iobroker.template",
+  "name": "iobroker.shed",
   "version": "0.0.1",
   "description": "Template for adapter development",
   "author": {
-    "name": "Author",
-    "email": "author@mail.com"
+    "name": "Taragorm",
+    "email": "Taragorm@zoho.eu"
   },
   "homepage": "https://github.com/Author/ioBroker.template",
   "license": "MIT",
   "keywords": [
     "ioBroker",
-    "template",
+    "shed",
     "Smart Home",
     "home automation"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Author/ioBroker.template"
+    "url": "https://github.com/Taragorm/ioBroker.shed"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^1.0.3"
@@ -50,7 +50,7 @@
     "lint:js": "eslint"
   },
   "bugs": {
-    "url": "https://github.com/Author/ioBroker.template/issues"
+    "url": "https://github.com/taragorm/ioBroker.shed/issues"
   },
   "readmeFilename": "README.md"
 }

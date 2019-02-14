@@ -7,15 +7,15 @@
                 "en": "initial release"
             }
         },
-        "title": "Simon's Shed Adaptor",
+        "title": "Shed Adaptor",
         "titleLang": {
-            "en": "Simon's Shed Adaptor"
+            "en": "Shed Adaptor"
         },
         "desc": {
-            "en": "Simon's Shed Adaptor"
+            "en": "Shed Adaptor"
         },
         "authors": [
-            "Author <simon~diogenes-club.org>"
+            "taragorm <taragorm.zoho.eu>"
         ],
         "keywords": [
             "ioBroker",
@@ -26,8 +26,8 @@
         "main": "main.js",
         "icon": "template.png",
         "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/Author/ioBroker.template/master/admin/template.png",
-        "readme": "https://github.com/Author/ioBroker.template/blob/master/README.md",
+        "extIcon": "https://raw.githubusercontent.com/taragorm/ioBroker.shed/master/admin/template.png",
+        "readme": "https://github.com/taragorm/ioBroker.shed/blob/master/README.md",
         "loglevel": "info",
         "mode": "daemon",
         "type": "general",
