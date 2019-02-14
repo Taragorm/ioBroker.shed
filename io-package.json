@@ -1,0 +1,71 @@
+{
+    "common": {
+        "name": "shed",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release"
+            }
+        },
+        "title": "Simon's Shed Adaptor",
+        "titleLang": {
+            "en": "Simon's Shed Adaptor"
+        },
+        "desc": {
+            "en": "Simon's Shed Adaptor"
+        },
+        "authors": [
+            "Author <simon~diogenes-club.org>"
+        ],
+        "keywords": [
+            "ioBroker",
+            "Smart Home",
+            "home automation"
+        ],
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "template.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/Author/ioBroker.template/master/admin/template.png",
+        "readme": "https://github.com/Author/ioBroker.template/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "general",
+        "compact": true,
+        "materialize": true,
+        "materializeTab": true,
+        "adminTab": {
+            "singleton": true,
+            "name": {
+                "en": "Template (JavaScript)",
+                "de": "Vorlage (JavaScript)",
+                "ru": "Шаблон (JavaScript)",
+                "pt": "Template (JavaScript)",
+                "nl": "Sjabloon (JavaScript)",
+                "fr": "Modèle (JavaScript)",
+                "it": "Template (JavaScript)",
+                "es": "Plantilla (JavaScript)",
+                "pl": "Szablon (JavaScript)",
+                "zh-cn": "模板（JavaScript）"
+            },
+            "link": "",
+            "fa-icon": "info"
+        },
+        "supportCustoms": true,
+        "dependencies": [
+            {
+                "admin": ">=3.0.0"
+            }
+        ]
+    },
+    "native": {
+        "ip" : "192.168.0.20",
+        "port" : 666,
+        "poll_rate_s" : 10
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+        }
+    ]
+}
