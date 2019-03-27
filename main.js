@@ -155,6 +155,15 @@ class ShedInterface extends utils.Adapter {
     }
 
     //--------------------------------------------------------------------
+    /**
+     * 
+     * @param {string} id 
+     * @param {string} name 
+     * @param {string} type 
+     * @param {string} unit 
+     * @param {boolean} wr 
+     * @param {string} role 
+     */
     async makeState(id, name, type, unit="",  wr=false, role="Value",) {
 
         this.log.info(`Making state ${id}` );
@@ -173,6 +182,9 @@ class ShedInterface extends utils.Adapter {
     }    
     
     //--------------------------------------------------------------------
+    /**
+     * @param {string} devicename
+     */
     async makeDevice(devicename) {
         this.log.info(`Making device ${devicename}` );
         
