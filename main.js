@@ -166,7 +166,7 @@ class ShedInterface extends utils.Adapter {
      */
     async makeState(id, name, type, unit="",  wr=false, role="Value",) {
 
-        this.log.info(`Making state ${id}` );
+        //this.log.info(`Making state ${id}` );
         await this.setObjectNotExistsAsync(id, {
             type: "state",
             common: {
@@ -186,7 +186,7 @@ class ShedInterface extends utils.Adapter {
      * @param {string} devicename
      */
     async makeDevice(devicename) {
-        this.log.info(`Making device ${devicename}` );
+        //this.log.info(`Making device ${devicename}` );
         
         await this.setObjectNotExistsAsync(devicename, {
             type: "device",
