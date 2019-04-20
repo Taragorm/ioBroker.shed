@@ -6,7 +6,7 @@
     "name": "Taragorm",
     "email": "Taragorm@zoho.eu"
   },
-  "homepage": "https://github.com/Author/ioBroker.template",
+  "homepage": "https://github.com/Taragorm/iobroker.shed",
   "license": "MIT",
   "keywords": [
     "ioBroker",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Taragorm/ioBroker.shed"
+    "url": "https://github.com/Taragorm/iobroker.shed"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^1.0.3"
@@ -50,7 +50,7 @@
     "lint:js": "eslint"
   },
   "bugs": {
-    "url": "https://github.com/taragorm/ioBroker.shed/issues"
+    "url": "https://github.com/taragorm/iobroker.shed/issues"
   },
   "readmeFilename": "README.md"
 }
