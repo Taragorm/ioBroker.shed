@@ -15,7 +15,11 @@ Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/Author/
 
 ## template adapter for ioBroker
 
-Template for adapter development
+This is a small adaptor for a custom bit of hardware.
+
+It polls using UDP, and parses a UDP response.
+
+Likely of no use to anyone except the author, save perhaos as an example.
 
 ## Changelog
 
