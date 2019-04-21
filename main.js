@@ -89,6 +89,8 @@ class ShedInterface extends utils.Adapter {
         } else {
             this.lastrelaystate = o.relay;
         }
+
+        o.lightOn = o.light > 1.0;
         
         this.setValues("state.",o);
     }
@@ -114,38 +116,39 @@ class ShedInterface extends utils.Adapter {
         {
             var dvc = 'state';
             await this.makeDevice(dvc);
-            await this.makeState(dvc+".relay", "Laser Operational", "boolean", "", true);
-            await this.makeState(dvc+".flags", "State Flags", "boolean", "");
-            await this.makeState(dvc+".insideTemp", "Inside Temp", "number", "C" );
-            await this.makeState(dvc+".pressure", "Pressure", "number", "hPa" );
-            await this.makeState(dvc+".humidity", "Humidity", "number", "%" );
-            await this.makeState(dvc+".outsideTemp", "Inside Temp", "number", "C" );
-            await this.makeState(dvc+".light", "Light Level", "number", "%" );
-            await this.makeState(dvc+".laserInletTemp", "Laser Inlet Temp", "number", "C" );
-            await this.makeState(dvc+".laserOutletTemp", "Laser Outlet Temp", "number", "C" );
-            await this.makeState(dvc+".laserTubeTemp", "Laser Tube Temp", "number", "C" );
-            await this.makeState(dvc+".laserCaseTemp", "Laser Enclosure Temp", "number", "C" );
+            await this.makeState(dvc+".relay",              "Laser Operational", "boolean", "", true);
+            await this.makeState(dvc+".flags",              "State Flags", "boolean", "");
+            await this.makeState(dvc+".insideTemp",         "Inside Temp", "number", "C" );
+            await this.makeState(dvc+".pressure",           "Pressure", "number", "hPa" );
+            await this.makeState(dvc+".humidity",           "Humidity", "number", "%" );
+            await this.makeState(dvc+".outsideTemp",        "Outside Temp", "number", "C" );
+            await this.makeState(dvc+".light",              "Light Level", "number", "%" );
+            await this.makeState(dvc+".lightOn",            "Light On", "boolean", "" );
+            await this.makeState(dvc+".laserInletTemp",     "Laser Inlet Temp", "number", "C" );
+            await this.makeState(dvc+".laserOutletTemp",    "Laser Outlet Temp", "number", "C" );
+            await this.makeState(dvc+".laserTubeTemp",      "Laser Tube Temp", "number", "C" );
+            await this.makeState(dvc+".laserCaseTemp",      "Laser Enclosure Temp", "number", "C" );
 
             dvc = 'counter';
             await this.makeDevice(dvc);
-            await this.makeState(dvc+".reset", "Reset Counters", "boolean", "", true);
-            await this.makeState(dvc+".goodpackets", "Good Packets", "number", "" );
-            await this.makeState(dvc+".csumerrs", "", "number", "" );
-            await this.makeState(dvc+".linklost", "", "number", "" );
-            await this.makeState(dvc+".overflows", "", "number", "" );
-            await this.makeState(dvc+".eth_packets", "", "number", "" );
-            await this.makeState(dvc+".relay_operations", "", "number", "" );
-            await this.makeState(dvc+".restarts", "", "number", "" );
+            await this.makeState(dvc+".reset",              "Reset Counters", "boolean", "", true);
+            await this.makeState(dvc+".goodpackets",        "Good Packets", "number", "" );
+            await this.makeState(dvc+".csumerrs",           "", "number", "" );
+            await this.makeState(dvc+".linklost",           "", "number", "" );
+            await this.makeState(dvc+".overflows",          "", "number", "" );
+            await this.makeState(dvc+".eth_packets",        "", "number", "" );
+            await this.makeState(dvc+".relay_operations",   "", "number", "" );
+            await this.makeState(dvc+".restarts", "",       "number", "" );
             
             
             dvc = 'persist';
             await this.makeDevice(dvc);
-            await this.makeState(dvc+".reset", "Reset Persist vars", "boolean", "", true);
-            await this.makeState(dvc+".restarts", "", "number", "" );
-            await this.makeState(dvc+".exceptions", "", "number", "" );
-            await this.makeState(dvc+".exc_addr", "", "number", "" );
-            await this.makeState(dvc+".exc_type", "", "number", "" );
-            await this.makeState(dvc+".exc_task", "", "string", "" );
+            await this.makeState(dvc+".reset",              "Reset Persist vars", "boolean", "", true);
+            await this.makeState(dvc+".restarts",           "", "number", "" );
+            await this.makeState(dvc+".exceptions",         "", "number", "" );
+            await this.makeState(dvc+".exc_addr",           "", "number", "" );
+            await this.makeState(dvc+".exc_type",           "", "number", "" );
+            await this.makeState(dvc+".exc_task",           "", "string", "" );
                         
         }
         catch(ex)
@@ -265,23 +268,6 @@ class ShedInterface extends utils.Adapter {
         }
     }
     //--------------------------------------------------------------------
-
-    // /**
-    //  * Some message was sent to this instance over message box. Used by email, pushover, text2speech, ...
-    //  * Using this method requires "common.message" property to be set to true in io-package.json
-    //  * @param {ioBroker.Message} obj
-    //  */
-    // onMessage(obj) {
-    // 	if (typeof obj === "object" && obj.message) {
-    // 		if (obj.command === "send") {
-    // 			// e.g. send email or pushover or whatever
-    // 			this.log.info("send command");
-
-    // 			// Send response in callback if required
-    // 			if (obj.callback) this.sendTo(obj.from, obj.command, "Message received", obj.callback);
-    // 		}
-    // 	}
-    // }
 
 }
 
