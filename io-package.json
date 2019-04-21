@@ -64,8 +64,5 @@
         "poll_rate_s" : 10
     },
     "objects": [],
-    "instanceObjects": [
-        {
-        }
-    ]
+    "instanceObjects": []
 }
