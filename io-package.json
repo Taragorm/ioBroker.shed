@@ -51,7 +51,7 @@
             "link": "",
             "fa-icon": "info"
         },
-        "supportCustoms": true,
+        "supportCustoms": false,
         "dependencies": [
             {
                 "admin": ">=3.0.0"
