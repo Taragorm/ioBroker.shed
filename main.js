@@ -250,16 +250,17 @@ class ShedInterface extends utils.Adapter {
             // The state was changed
             this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
             if(!state.ack) {
-                if(id.endsWith("relay")) {
+                if(id.endsWith("relay.val")) {
                     this.shed.setRelay(state.val);
-                } else if(id.endsWith("counter.reset")) {
+                    this.shed.send("E");
+                } else if(id.endsWith("counter.reset.val")) {
                     this.shed.resetCounters();
                     this.setState('counter.reset', { val: false, ack: true });
-                } else if(id.endsWith("persist.reset")) {
+                } else if(id.endsWith("persist.reset.val")) {
                     this.shed.resetPersisted();
                     this.setState('persist.reset', { val: false, ack: true });
                 } else {
-                    this.log.warn(`Dont know what to do with state ${id} changed: ${JSON.stringify(obj)}`);
+                    this.log.warn(`Dont know what to do with state ${id} changed: ${JSON.stringify(state)}`);
                 }
             }
         } else {
